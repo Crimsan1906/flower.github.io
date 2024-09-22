@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Amarillas</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Estilos de la tarjeta */
+    .card {
+      position: absolute;
+      top: 50px; /* Ajusta la posición vertical */
+      right: 10px; /* Ajusta la posición horizontal */
+      background-color: #ffeb3b; /* Color de fondo amarillo claro */
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra intensa */
+      padding: 20px;
+      width: 280px; /* Aumentado para mejor presentación */
+      transition: transform 0.3s;
+      z-index: 10;
+      border: 2px solid #ffc107; /* Borde amarillo oscuro */
+    }
+
+    .card h2 {
+      font-size: 22px; /* Aumentado para mayor impacto */
+      margin: 0 0 10px 0;
+      color: #fff; /* Texto blanco */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      font-weight: bold; /* Título resaltado */
+    }
+
+    .card p {
+      font-size: 15px; /* Ajustado para mejor legibilidad */
+      color: #333; /* Texto gris oscuro */
+      line-height: 1.5; /* Mejora la legibilidad */
+      font-style: italic; /* Texto en cursiva */
+    }
+
+    /* Efecto hover en la tarjeta */
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Corazones animados */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: bounce 1s infinite;
+      opacity: 0; /* Comienza invisible */
+      pointer-events: none; /* No bloquea la interacción con la tarjeta */
+    }
+
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Estilos para el contenedor de las flores */
+    .flowers {
+      position: relative; /* Asegúrate de que el contenedor de flores tenga un contexto de posicionamiento */
+      margin-top: 50px; /* Espacio para que la tarjeta no cubra las flores */
+      display: flex;
+      flex-wrap: wrap; /* Para una mejor disposición */
+      justify-content: center; /* Centra las flores */
+    }
+
+    /* Flor */
+    .flower {
+      margin: 15px; /* Espaciado entre las flores */
+    }
+  </style>
+</head>
+<body class="container">
+  <!-- Tarjeta al lado de las flores -->
+  <div class="card" id="heartCard">
+    <h2>Para mi Yelito Preciosa:</h2>
+    <p><i>Te amo mi amor, estas flores son para ti. Se sabe que no soy bueno en hacer manualidades, sin embargo, puedo hacer este tipo de cosas para ti. Espero sea de tu agrado. TE PROMETI TUS FLORES AMARILLAS, AQUI ESTAN!!!! TE AMO!!!</i></p>
+    <div class="heart" id="heart"></div>
+  </div>
+
+  <div class="night"></div>
+
+  <!-- Contenedor de las flores -->
+  <div class="flowers">
+    <div class="flower flower--1">
+      <div class="flower__leafs flower__leafs--1">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+        <div class="flower__line__leaf flower__line__leaf--5"></div>
+        <div class="flower__line__leaf flower__line__leaf--6"></div>
+      </div>
+    </div>
+
+    <!-- Repite el mismo esquema para las otras flores -->
+    <div class="flower flower--2">
+      <div class="flower__leafs flower__leafs--2">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <!-- Agrega más flores aquí -->
+    <div class="flower flower--3">
+      <div class="flower__leafs flower__leafs--3">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+    <div class="flower flower--4">
+      <div class="flower__leafs flower__leafs--3">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <div class="flower flower--5">
+      <div class="flower__leafs flower__leafs--3">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const card = document.getElementById('heartCard');
+    const flowers = document.querySelectorAll('.flower');
+
+    card.addEventListener('mouseover', () => {
+      flowers.forEach(flower => {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        flower.appendChild(heart);
+
+        // Posición aleatoria dentro de la flor
+        const flowerRect = flower.getBoundingClientRect();
+        const x = Math.random() * flowerRect.width;
+        const y = Math.random() * flowerRect.height;
+        
+        heart.style.left = `${x}px`;
+        heart.style.top = `${y}px`;
+        heart.style.opacity = 1; // Muestra el corazón
+        
+        // Eliminar el corazón después de un tiempo
+        setTimeout(() => {
+          heart.style.opacity = 0;
+          setTimeout(() => {
+            flower.removeChild(heart);
+          }, 1000); // Espera a que la animación termine antes de eliminar
+        }, 1000); // Mantiene el corazón visible por un segundo
+      });
+    });
+  </script>
+</body>
+</html>
